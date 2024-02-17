@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,15 +23,231 @@
 
     <!-- Custom css file -->
     <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- custom tailwind classes -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: '#030712',
+              green: '#1DD100',
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body>
-    <!-- Header section code start -->
-    <header>
-      <nav></nav>
+    <!-- Header code start -->
+    <header class="container mx-auto px-4 lg:px-0">
+      <!-- Navbar section -->
+      <nav class="py-4">
+        <div class="navbar">
+          <div class="navbar-start">
+            <a class="text-4xl font-extrabold text-dark">P-Ticket</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li>
+                <a
+                  class="text-lg font-medium text-[#030712B3] hover:bg-transparent hover:text-green duration-500"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-lg font-medium text-[#030712B3] hover:bg-transparent hover:text-green duration-500"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-lg font-medium text-[#030712B3] hover:bg-transparent hover:text-green duration-500"
+                  >Destination</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-lg font-medium text-[#030712B3] hover:bg-transparent"
+                  >Search</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <button
+              class="btn rounded-xl border border-[#1DD10066] bg-[#1DD1001A] px-5 text-green font-raleway text-xl font-bold hover:bg-[#1DD1001A] hover:border-[#1DD10066]"
+            >
+              Bus
+              <img src="./images/bus-icon.png" alt="bus" />
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Banner section -->
+      <section class="banner">
+        <div class="text-center">
+          <div class="relative -z-10">
+            <img class="w-full" src="./images/banner.png" alt="banner" />
+          </div>
+          <div
+            class="banner-desc absolute left-2/4 translate-x-[-50%] top-2/4 translate-y-[-50%]"
+          >
+            <h1
+              class="text-6xl font-extrabold leading-[86px] text-white font-raleway"
+            >
+              End-to-End Travel with
+              <br />
+              <span class="text-green">P Paribahan</span>
+            </h1>
+            <p class="text-lg font-normal font-inter leading-8 text-white my-4">
+              Yes, you can run unit tests and view the results directly within
+              the app. The <br />
+              integrated testing features allow for a streamlined .
+            </p>
+            <button
+              class="rounded-xl bg-green px-7 py-4 border-none text-xl font-bold font-raleway mt-4 hover:bg-white hover:text-dark duration-500"
+            >
+              Buy Tickets
+            </button>
+          </div>
+          <div class="banner-boxes flex justify-center mt-[-60px] z-1">
+            <div
+              class="box-1 bg-white rounded-3xl border-b-[3px] border-b-green flex p-8"
+            >
+              <div>
+                <img src="./images/people.png" alt="people icon" />
+              </div>
+              <div class="ml-2">
+                <h4 class="font-inter text-4xl font-bold text-dark">500K+</h4>
+                <p class="font-inter text-lg font-normal text-[#03071299]">
+                  Registered users
+                </p>
+              </div>
+            </div>
+            <div
+              class="box-2 bg-white rounded-3xl border-b-[3px] border-b-green flex p-8 mx-6"
+            >
+              <div>
+                <img src="./images/ticket-cupon.png" alt="people icon" />
+              </div>
+              <div class="ml-2">
+                <h4 class="font-inter text-4xl font-bold text-dark">
+                  1.7 lacks
+                </h4>
+                <p class="font-inter text-lg font-normal text-[#03071299]">
+                  Tickets sold
+                </p>
+              </div>
+            </div>
+            <div
+              class="box-3 bg-white rounded-3xl border-b-[3px] border-b-green flex p-8"
+            >
+              <div>
+                <img src="./images/stoppage.png" alt="people icon" />
+              </div>
+              <div class="ml-2">
+                <h4 class="font-inter text-4xl font-bold text-dark">80K+</h4>
+                <p class="font-inter text-lg font-normal text-[#03071299]">
+                  Rental partners
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </header>
     <!-- Header section code end -->
 
     <!-- Main section code start -->
+    <main>
+      <section class="offer container mx-auto px-4 lg:px-0 py-20">
+        <div class="offer-title text-center">
+          <h3 class="text-dark font-raleway text-4xl font-bold">
+            Best offers for you
+          </h3>
+        </div>
+        <div class="coupons flex justify-between my-12">
+          <div class="coupon-1 flex justify-between bg-[#FFBF0F] rounded-3xl">
+            <div class="p-14">
+              <h3
+                class="text-[#030712CC] font-inter text-4xl font-black leading-9"
+              >
+                15% OFF
+              </h3>
+              <h5
+                class="text-[#030712CC] font-inter text-xl font-semibold leading-9"
+              >
+                on your next purchase
+              </h5>
+              <p
+                class="text-[#03071280] font-inter text-lg font-medium leading-9"
+              >
+                use by January 2024
+              </p>
+            </div>
+            <div class="flex">
+              <div>
+                <img src="./images/cupon-devider.png" alt="" />
+              </div>
+              <div class="p-14">
+                <h5
+                  class="text-dark font-raleway text-3xl font-bold leading-[57.6px]"
+                >
+                  NEW15
+                </h5>
+                <p class="text-[#03071266] font-raleway text-xl font-medium">
+                  Coupon Code
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="coupon-2 flex justify-between bg-[#F78C9C] rounded-3xl">
+            <div class="p-14">
+              <h3
+                class="text-[#030712CC] font-inter text-4xl font-black leading-9"
+              >
+                20% OFF
+              </h3>
+              <h5
+                class="text-[#030712CC] font-inter text-xl font-semibold leading-9"
+              >
+                on your next purchase
+              </h5>
+              <p
+                class="text-[#03071280] font-inter text-lg font-medium leading-9"
+              >
+                use by January 2024
+              </p>
+            </div>
+            <div class="flex">
+              <div>
+                <img src="./images/cupon-devider.png" alt="" />
+              </div>
+              <div class="p-14">
+                <h5
+                  class="text-dark font-raleway text-3xl font-bold leading-[57.6px]"
+                >
+                  Couple 20
+                </h5>
+                <p class="text-[#03071266] font-raleway text-xl font-medium">
+                  Coupon Code
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button
+            class="rounded-xl border-green border px-7 py-4 text-green font-raleway font-bold text-xl hover:bg-green hover:text-dark duration-500"
+          >
+            See All Offers
+          </button>
+        </div>
+      </section>
+    </main>
     <!-- Main section code end -->
 
     <!-- Footer section code start -->
